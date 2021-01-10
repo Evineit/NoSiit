@@ -3,6 +3,7 @@ import axios from 'axios'
 // TODO: If deployed change to calling the api subdomain
 
 export async function signIn(user, password) {
+  // Probably unnecesary now that mechsoup is used
   await axios.get('http://127.0.0.1:5000/start')
   let data = new FormData();
   data.append('usuario', user);
