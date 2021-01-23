@@ -1,33 +1,38 @@
-import axios from 'axios'
+import axios from 'axios';
 
 // TODO: If deployed change to calling the api subdomain
 
 export async function signIn(user, password) {
-  // Probably unnecesary now that mechsoup is used
-  await axios.get('http://127.0.0.1:5000/start')
   let data = new FormData();
   data.append('usuario', user);
   data.append('contrasena', password);
-  let config = {
-    method: 'post',
-    url: 'http://127.0.0.1:5000/login',
-    data: data
-  };
+    let config = {
+        method: 'post',
+        url: '/login',
+        data: data,
+        withCredentials: true
+    };
   let res = await axios(config);
   return res.data;
 }
 
 export async function getCalif() {
-  var res = await axios.get('http://127.0.0.1:5000/calif')
+  var res = await axios.get('/calif',
+      {
+        withCredentials: true
+      });
   return res.data;
 }
 
 export async function currentSession() {
-  var res = await axios.get('http://127.0.0.1:5000/session')
-  return res.status
+  var res = await axios.get('/session',
+      {
+        withCredentials: true
+      });
+  return res.status;
 }
 
 export async function signOut() {
-  var res = await axios.get('http://127.0.0.1:5000/signout')
+  var res = await axios.get('/signout');
   return res.data;
 }

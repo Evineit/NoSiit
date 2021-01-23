@@ -21,7 +21,7 @@ export default function Home() {
       } catch (e) {
         // TODO
         // onError(e);
-        alert(e.message)
+        alert(e.message);
       }
 
       setIsLoading(false);
