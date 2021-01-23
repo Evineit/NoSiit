@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import LoaderButton from "../components/LoaderButton";
 import "./Login.css";
 import { signIn } from "../libs/api";
 import { useAppContext } from "../libs/contextLib";
 import { useFormFields } from "../libs/hooksLib";
-// import axios from "axios";
 export default function Login() {
   const { userHasAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(false);
@@ -25,8 +24,6 @@ export default function Login() {
     try {
       await signIn(fields.email, fields.password)
       userHasAuthenticated(true);
-      // console.log(res)
-      // alert('Logged in')
     } catch (e) {
       console.log(e.message)
       setIsLoading(false);
@@ -53,10 +50,15 @@ export default function Login() {
             onChange={handleFieldChange}
           />
         </Form.Group>
-        {/* TODO: Add loading button */}
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
+        <LoaderButton
+          block
+          size="lg"
+          type="submit"
+          isLoading={isLoading}
+          disabled={!validateForm()}
+        >
           Login
-        </Button>
+        </LoaderButton>
       </Form>
     </div>
   );

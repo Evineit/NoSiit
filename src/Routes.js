@@ -3,18 +3,19 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login"
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
+import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 
 
 export default function Routes() {
-  // TODO: Authenticated routes
   return (
     <Switch>
-      <Route exact path="/">
+      <AuthenticatedRoute exact path="/">
         <Home />
-      </Route>
-      <Route exact path="/login">
+      </AuthenticatedRoute>
+      <UnauthenticatedRoute exact path="/login">
         <Login />
-      </Route>
+      </UnauthenticatedRoute>
       
       {/* Finally, catch all unmatched routes */}
       <Route>
