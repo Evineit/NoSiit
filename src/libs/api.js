@@ -1,14 +1,12 @@
 import axios from 'axios';
 
-// TODO: If deployed change to calling the api subdomain
-
 export async function signIn(user, password) {
   let data = new FormData();
   data.append('usuario', user);
   data.append('contrasena', password);
     let config = {
         method: 'post',
-        url: '/login',
+        url: 'https://api.nosiit.live/login',
         data: data,
         withCredentials: true
     };
@@ -17,7 +15,7 @@ export async function signIn(user, password) {
 }
 
 export async function getCalif() {
-  var res = await axios.get('/calif',
+  var res = await axios.get('https://api.nosiit.live/calif',
       {
         withCredentials: true
       });
@@ -25,7 +23,7 @@ export async function getCalif() {
 }
 
 export async function getKardex() {
-  const response = await axios.get('/kardex',
+  const response = await axios.get('https://api.nosiit.live/kardex',
     {
       withCredentials:true
     });
@@ -33,7 +31,7 @@ export async function getKardex() {
 }
 
 export async function currentSession() {
-  var res = await axios.get('/session',
+  var res = await axios.get('https://api.nosiit.live/session',
       {
         withCredentials: true
       });
@@ -41,6 +39,6 @@ export async function currentSession() {
 }
 
 export async function signOut() {
-  var res = await axios.get('/signout');
+  var res = await axios.get('https://api.nosiit.live/signout');
   return res.data;
 }
