@@ -48,9 +48,12 @@ function App() {
             <Nav activeKey={window.location.pathname}>
               {isAuthenticated ? (
                 <>
-                  {/* <LinkContainer to="/settings">
-                    <Nav.Link>Settings</Nav.Link>
-                  </LinkContainer> */}
+                  <LinkContainer to="/kardex">
+                    <Nav.Link>Kardex</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="/calif_partial">
+                    <Nav.Link>Calif. Parciales</Nav.Link>
+                  </LinkContainer>
                   <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
                 </>
               ) : (

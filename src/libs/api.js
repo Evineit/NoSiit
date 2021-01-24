@@ -24,6 +24,14 @@ export async function getCalif() {
   return res.data;
 }
 
+export async function getKardex() {
+  const response = await axios.get('/kardex',
+    {
+      withCredentials:true
+    });
+  return response.data
+}
+
 export async function currentSession() {
   var res = await axios.get('/session',
       {
