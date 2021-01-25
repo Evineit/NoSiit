@@ -39,6 +39,9 @@ export async function currentSession() {
 }
 
 export async function signOut() {
-  var res = await axios.get('https://api.nosiit.live/signout');
+  var res = await axios.get('https://api.nosiit.live/signout',
+  {
+    withCredentials: true
+  });
   return res.data;
 }
