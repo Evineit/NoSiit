@@ -1,66 +1,85 @@
 .Home .lander {
-    padding: 80px 0;
-    text-align: center;
-  }
-  table th {
-    text-align: center;
-  }
-  .Home .lander h1 {
-    font-family: "Open Sans" , sans-serif !important;
-    font-weight: 600 !important;
-  }
-  .Home h3 {
-    font-family: "Open Sans" , sans-serif !important;
-    font-weight: 600 !important;
-  }
-  .Home h4 {
-    font-family: "Open Sans" , sans-serif !important;
-    font-weight: 600 !important;
-    font-style: normal !important;
-  }
-  
-  .Home h4 i {
-    font-family: "Open Sans" , sans-serif !important;
-    font-weight: 500 !important;
-    font-style: normal !important;
-  }
+  padding: 80px 0;
+  text-align: center;
+}
+table th {
+  text-align: center;
+}
+.Home .lander h1 {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600 !important;
+}
+.Home h3 {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600 !important;
+}
+.Home h4 {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
 
-  svg {
-    /* overflow: hidden; */
-    overflow: auto;
-    font-size: 3rem;
-    margin: auto 10px;
-    min-width: 48px;
-  }
+.Home h4 i {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+}
 
-  .card-deck {
-    display:grid;
-    margin-right:-15px;
-    margin-left:-15px;
-    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
-    justify-content: center;
-   }
-   
-.card > svg:nth-child(1) {
+svg {
+  overflow: auto;
   font-size: 3rem;
+  margin: auto 10px;
+  min-width: 48px;
+}
+
+.card-deck {
+  display: grid;
+  margin-right: -15px;
+  margin-left: -15px;
+  grid-template-columns: repeat(auto-fit, 280px);
+  justify-content: center;
 }
 
 .card {
   flex-direction: inherit;
   margin-bottom: 15px;
   min-height: 101px;
+  border-radius: 0px;
+  border-color: transparent;
+}
+
+.card:hover {
+  background-color: rgb(235, 235, 235);
+  border-color: rgba(0, 0, 0, 0.125);
 }
 
 .card-body {
-  -ms-flex:1 1 auto;
-  flex:1 1 auto;
-  min-height:1px;
-  padding:1.25rem;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
   margin: auto;
- }
-  .card-deck .card {
-   margin-bottom:15px;
+}
+.card-deck .card {
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .card-deck {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 
- 
-  
+  .card {
+    min-height: 64px;
+  }
+}
+@media (max-device-width: 500px) {
+  .card-deck .card {
+    border-color: rgba(0, 0, 0, 0.125);
+    margin-bottom: -1px;
+    text-align: left;
+  }
+  svg {
+    font-size: 2rem;
+  }
+}
