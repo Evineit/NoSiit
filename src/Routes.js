@@ -4,6 +4,7 @@ import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login"
 import Kardex from "./containers/Kardex";
+import Calif from "./containers/Calif";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 
@@ -11,11 +12,11 @@ import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 export default function Routes() {
   return (
     <Switch>
-      <AuthenticatedRoute exact path="/">
+      <Route exact path="/">
         <Home />
-      </AuthenticatedRoute>
+      </Route>
       <AuthenticatedRoute exact path="/calif_partial">
-        <Home />
+        <Calif />
       </AuthenticatedRoute>
       <AuthenticatedRoute exact path="/kardex">
         <Kardex />
