@@ -1,6 +1,6 @@
 import "./Home.css";
 import { Card, CardDeck } from "react-bootstrap";
-import { BsStarFill } from "react-icons/bs"
+import { BsStarFill, BsTable, BsTrophy } from "react-icons/bs"
 import { useHistory } from "react-router-dom";
 
 export default function Home() {
@@ -17,11 +17,11 @@ export default function Home() {
           <Card.Body>Calificaciones</Card.Body>
         </Card>
         <Card onClick={()=>{history.push("/kardex");}}>
-          <BsStarFill/>
+          <BsTable/>
           <Card.Body>Kardex</Card.Body>
         </Card>
         <Card onClick={()=>{history.push("/avance_reticular");}}>
-          <BsStarFill/>
+          <BsTrophy/>
           <Card.Body>Avance reticular</Card.Body>
         </Card>
         </CardDeck>

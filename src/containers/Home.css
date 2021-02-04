@@ -25,6 +25,10 @@ table th {
   font-style: normal !important;
 }
 
+.text-muted {
+  color:#747779 !important;
+ }
+ 
 svg {
   overflow: auto;
   font-size: 3rem;
