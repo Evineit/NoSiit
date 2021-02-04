@@ -30,6 +30,14 @@ export async function getKardex() {
   return response.data
 }
 
+export async function getAvanceRet() {
+  const response = await axios.get('https://api.nosiit.live/avance_reticular',
+    {
+      withCredentials:true
+    });
+  return response.data
+}
+
 export async function currentSession() {
   var res = await axios.get('https://api.nosiit.live/session',
       {

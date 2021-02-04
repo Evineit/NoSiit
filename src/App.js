@@ -54,6 +54,9 @@ function App() {
                   <LinkContainer to="/calif_partial">
                     <Nav.Link>Calif. Parciales</Nav.Link>
                   </LinkContainer>
+                  <LinkContainer to="/avance_reticular">
+                    <Nav.Link>Avance reticular</Nav.Link>
+                  </LinkContainer>
                   <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
                 </>
               ) : (

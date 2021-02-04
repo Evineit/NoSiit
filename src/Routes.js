@@ -4,6 +4,7 @@ import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login"
 import Kardex from "./containers/Kardex";
+import AvanceRet from "./containers/Avance_ret";
 import Calif from "./containers/Calif";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
@@ -20,6 +21,9 @@ export default function Routes() {
       </AuthenticatedRoute>
       <AuthenticatedRoute exact path="/kardex">
         <Kardex />
+      </AuthenticatedRoute>
+      <AuthenticatedRoute exact path="/avance_reticular">
+        <AvanceRet />
       </AuthenticatedRoute>
       <UnauthenticatedRoute exact path="/login">
         <Login />
