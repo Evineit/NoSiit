@@ -14,12 +14,17 @@ function App() {
   const history = useHistory();
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   const [isAuthenticated, userHasAuthenticated] = useState(false);
+
+  history.listen(location => {
+    ReactGA.initialize('UA-34432970-3 ');
+    ReactGA.set({ page: location.pathname }); // Update the user's current page
+    ReactGA.pageview(location.pathname)
+  })
+
   useEffect(() => {
     onLoad();
   }, []);
   async function onLoad() {
-    ReactGA.initialize('UA-34432970-3 ');
-    history.listen(location => ReactGA.pageview(location.pathname));
     try {
       await currentSession();
       userHasAuthenticated(true);
