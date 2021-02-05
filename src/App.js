@@ -8,6 +8,7 @@ import { AppContext } from "./libs/contextLib";
 import { LinkContainer } from "react-router-bootstrap";
 import { useHistory } from "react-router-dom";
 import { currentSession, signOut } from "./libs/api";
+import ReactGA from 'react-ga';
 
 function App() {
   const history = useHistory();
@@ -17,6 +18,8 @@ function App() {
     onLoad();
   }, []);
   async function onLoad() {
+    ReactGA.initialize('UA-34432970-3 ');
+    history.listen(location => ReactGA.pageview(location.pathname));
     try {
       await currentSession();
       userHasAuthenticated(true);
