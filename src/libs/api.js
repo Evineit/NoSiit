@@ -38,6 +38,14 @@ export async function getAvanceRet() {
   return response.data
 }
 
+export async function getGruposCargados() {
+  const response = await axios.get('https://api.nosiit.live/grupos_cargados',
+    {
+      withCredentials:true
+    });
+  return response.data
+}
+
 export async function currentSession() {
   var res = await axios.get('https://api.nosiit.live/session',
       {
