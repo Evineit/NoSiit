@@ -36,6 +36,7 @@ function App() {
   }
   return (
     !isAuthenticating && (
+      // TODO: Check if container-fluid works better for the layout
       <div className="App container py-3">
         <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
           <LinkContainer to="/">
