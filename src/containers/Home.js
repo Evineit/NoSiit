@@ -1,6 +1,6 @@
 import "./Home.css";
 import { Card, CardDeck } from "react-bootstrap";
-import { BsStarFill, BsTable, BsTrophy, BsUpload } from "react-icons/bs"
+import { BsStarFill, BsTable, BsTrophy, BsUpload, BsClockFill } from "react-icons/bs"
 import { useHistory } from "react-router-dom";
 
 export default function Home() {
@@ -12,6 +12,10 @@ export default function Home() {
         <h1>NoSiit</h1>
         <p className="text-muted">A simple Siit frontend app</p>
         <CardDeck>
+        <Card onClick={()=>{history.push("/horario");}}>
+          <BsClockFill/>
+          <Card.Body>Horario</Card.Body>
+        </Card>
         <Card onClick={()=>{history.push("/calif_partial");}}>
           <BsStarFill/>
           <Card.Body>Calificaciones</Card.Body>

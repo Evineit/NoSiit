@@ -1,0 +1,76 @@
+.horario {
+  padding: 0px 0px 10px 0px;
+  text-align: center;
+
+  img {
+    display: none;
+  }
+
+  .boton {
+    display: none;
+  }
+
+  .table > div:nth-child(1) > div:nth-child(13) {
+    display: none;
+  }
+
+  .table > div:nth-child(1) > div:nth-child(18) {
+    display: none;
+   } 
+
+  .table > div:nth-child(1) > div:nth-child(14) {
+    display: none;
+   }
+   
+
+  .small_left {
+    font-size: 9px;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+  }
+
+  h4 i {
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+  }
+
+  th,
+  td {
+    font-size: x-small;
+  }
+
+  .table-bordered td,
+  .table-bordered th {
+    font-weight: 600;
+    border: 1px solid #dee2e6;
+    padding-block: 0px;
+    padding: 2px 5px;
+    margin: 0px;
+    margin-block: 0px;
+    height: auto;
+  }
+
+  table {
+    //   width: fill-available;
+    //   width: -moz-available;
+    //   min-width: max-content;
+    th {
+      text-align: center;
+    }
+  }
+}

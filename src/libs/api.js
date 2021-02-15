@@ -46,6 +46,14 @@ export async function getGruposCargados() {
   return response.data
 }
 
+export async function getHorario() {
+  const response = await axios.get('https://api.nosiit.live/horario',
+    {
+      withCredentials:true
+    });
+  return response.data
+}
+
 export async function currentSession() {
   var res = await axios.get('https://api.nosiit.live/session',
       {
