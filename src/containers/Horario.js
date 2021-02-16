@@ -50,34 +50,30 @@ export default function Horario() {
         return 0;
       })
 
-      for (let index = 0; index < array.length; index++) {
-        const element = array[index];
+      array.forEach((element) => {
         parent.insertBefore(element, parent.lastElementChild)
-      }
+      })
       removeEmptySaturday()
     }
 
     function removeEmptySaturday() {
-      let nodes = document.querySelectorAll(
+      let table_rows = document.querySelectorAll(
         ".table > div:nth-child(1) > table:nth-child(11) > tbody:nth-child(1) > tr#par, .table > div:nth-child(1) > table:nth-child(11) > tbody:nth-child(1) > tr#non"
       );
       let flag = true
-      nodes.forEach((node) => {
+      table_rows.forEach((node) => {
         if (node.cells.length === 8){
           flag = false
           return
         }
         if (!!node.cells[8].firstChild.data.trim()){
           flag = false
-          console.log('false')
-          console.log(node.cells[8].firstChild.data.trim())
-          console.log(node)
         }
       })
       if (flag) {
-        nodes = document.querySelectorAll('.table > div:nth-child(1) > table:nth-child(11) > tbody:nth-child(1) > tr')
-        for (let index = 0; index < nodes.length-1; index++) {
-          const element = nodes[index];
+        table_rows = document.querySelectorAll('.table > div:nth-child(1) > table:nth-child(11) > tbody:nth-child(1) > tr')
+        for (let index = 0; index < table_rows.length-1; index++) {
+          const element = table_rows[index];
           element.cells[8].remove()
         }
       }
