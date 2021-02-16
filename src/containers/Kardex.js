@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getKardex } from "../libs/api";
-import "./Kardex.css";
+import "./Kardex.scss";
 import { Table } from "react-bootstrap";
 
 export default function Kardex() {

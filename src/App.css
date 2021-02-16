@@ -1,6 +1,5 @@
-.App {
+@media screen and (max-width: 768px) {
+    .App {
+        max-width: 100%;
+    }
 }
-
-/* .navbar {
-    background-color: #5a0202d6;
-} */

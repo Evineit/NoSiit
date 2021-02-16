@@ -1,0 +1,18 @@
+.Kardex {
+  img {
+    display: none;
+  }
+  
+  .boton {
+    display: none;
+  }
+  
+  table {
+    text-align: center;
+  }
+  @media screen and (max-width:500px) {
+    .table td, .table th {
+      font-size: x-small;
+      }
+  }
+}

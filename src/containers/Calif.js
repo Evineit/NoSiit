@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useAppContext } from "../libs/contextLib";
 import { getCalif } from "../libs/api";
-import "./Calif.css";
+import "./Calif.scss";
 import { Table } from "react-bootstrap";
 
 export default function Calif() {

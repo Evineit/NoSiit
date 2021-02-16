@@ -7,6 +7,7 @@ import Kardex from "./containers/Kardex";
 import AvanceRet from "./containers/Avance_ret";
 import Calif from "./containers/Calif";
 import GruposCargados from "./containers/GruposCargados";
+import Horario from "./containers/Horario";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 
@@ -28,6 +29,9 @@ export default function Routes() {
       </AuthenticatedRoute>
       <AuthenticatedRoute exact path="/grupos_cargados">
         <GruposCargados />
+      </AuthenticatedRoute>
+      <AuthenticatedRoute exact path="/horario">
+        <Horario />
       </AuthenticatedRoute>
       <UnauthenticatedRoute exact path="/login">
         <Login />
