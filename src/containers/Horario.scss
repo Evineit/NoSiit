@@ -77,10 +77,17 @@
       text-align: center;
     }
   }
+  
+  .button-sort {
+    position:fixed;
+    bottom: 10px;
+    right: 10px;
+  }
 
   @media only screen and (min-width: 768px) {
     .table > div:nth-child(1) > table:nth-child(11) {
       white-space: pre;
+      width: auto;
     }
 
     .table > div:nth-child(1) > table:nth-child(11) > tbody > tr > td {
@@ -91,11 +98,6 @@
       display: none;
     }
 
-    .button-sort {
-      position:fixed;
-      bottom: 10px;
-      right: 10px;
-    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -112,6 +114,11 @@
     .table > div:nth-child(1) > table:nth-child(11) > tbody > tr > th.small_negrita_center:nth-child(3),
     .table > div:nth-child(1) > table:nth-child(11) > tbody > tr:last-child {
       display: none;
+    }
+    .button-sort {
+      font-size: 1rem;
+      opacity: 0.7;
+      border-radius: 2rem;
     }
   }
 }
