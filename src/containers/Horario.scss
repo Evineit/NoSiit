@@ -1,9 +1,13 @@
 .horario {
-  padding: 0px 0px 10px 0px;
+  padding: 20px 0px 10px 0px;
   text-align: center;
 
   img {
     display: none;
+  }
+
+  table {
+    margin-block-end: 15px
   }
 
   .boton {
@@ -71,6 +75,43 @@
     //   min-width: max-content;
     th {
       text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .table > div:nth-child(1) > table:nth-child(11) {
+      white-space: pre;
+    }
+
+    .table > div:nth-child(1) > table:nth-child(11) > tbody > tr > td {
+      font-size: .7rem;
+    }
+
+    .table > div:nth-child(1) > br {
+      display: none;
+    }
+
+    .button-sort {
+      position:fixed;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .horario .table-bordered td,
+    .horario .table-bordered th {
+    width: max-content;
+    }
+    table {
+      width: auto;
+    }
+    .table > div:nth-child(1) > table:nth-child(11) > tbody > tr > td:nth-child(2),
+    .table > div:nth-child(1) > table:nth-child(11) > tbody > tr th.small_negrita_center:nth-child(2),
+    .table > div:nth-child(1) > table:nth-child(11) > tbody > tr > td:nth-child(3),
+    .table > div:nth-child(1) > table:nth-child(11) > tbody > tr > th.small_negrita_center:nth-child(3),
+    .table > div:nth-child(1) > table:nth-child(11) > tbody > tr:last-child {
+      display: none;
     }
   }
 }

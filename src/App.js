@@ -59,6 +59,9 @@ function App() {
             <Nav activeKey={window.location.pathname}>
               {isAuthenticated ? (
                 <>
+                  <LinkContainer to="/horario">
+                    <Nav.Link>Horario</Nav.Link>
+                  </LinkContainer>
                   <LinkContainer to="/kardex">
                     <Nav.Link>Kardex</Nav.Link>
                   </LinkContainer>
