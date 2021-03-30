@@ -1,71 +1,56 @@
 import axios from 'axios';
 
+const instance = axios.create({
+  baseURL: 'https://backend.nosiit.live/',
+  timeout: 10000,
+  withCredentials: true,
+});
+
 export async function signIn(user, password) {
   let data = new FormData();
   data.append('usuario', user);
   data.append('contrasena', password);
     let config = {
         method: 'post',
-        url: 'https://api.nosiit.live/login',
+        url: 'login',
         data: data,
-        withCredentials: true
+        
     };
-  let res = await axios(config);
+  let res = await instance(config);
   return res.data;
 }
 
 export async function getCalif() {
-  var res = await axios.get('https://api.nosiit.live/calif',
-      {
-        withCredentials: true
-      });
+  var res = await instance.get('calif');
   return res.data;
 }
 
 export async function getKardex() {
-  const response = await axios.get('https://api.nosiit.live/kardex',
-    {
-      withCredentials:true
-    });
+  const response = await instance.get('kardex');
   return response.data
 }
 
 export async function getAvanceRet() {
-  const response = await axios.get('https://api.nosiit.live/avance_reticular',
-    {
-      withCredentials:true
-    });
+  const response = await instance.get('avance_reticular');
   return response.data
 }
 
 export async function getGruposCargados() {
-  const response = await axios.get('https://api.nosiit.live/grupos_cargados',
-    {
-      withCredentials:true
-    });
+  const response = await instance.get('grupos_cargados');
   return response.data
 }
 
 export async function getHorario() {
-  const response = await axios.get('https://api.nosiit.live/horario',
-    {
-      withCredentials:true
-    });
+  const response = await instance.get('horario');
   return response.data
 }
 
 export async function currentSession() {
-  var res = await axios.get('https://api.nosiit.live/session',
-      {
-        withCredentials: true
-      });
+  var res = await instance.get('session');
   return res.status;
 }
 
 export async function signOut() {
-  var res = await axios.get('https://api.nosiit.live/signout',
-  {
-    withCredentials: true
-  });
+  var res = await instance.get('signout');
   return res.data;
 }
