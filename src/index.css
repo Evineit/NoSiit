@@ -7,6 +7,16 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", sans-serif;
 }
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.66);
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+ color:rgba(0,0,0,0.86);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "PT Serif", serif;
 }
