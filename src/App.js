@@ -71,7 +71,7 @@ function App() {
                   <LinkContainer to="/avance_reticular">
                     <Nav.Link>Avance reticular</Nav.Link>
                   </LinkContainer>
-                  <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+                  <Nav.Link onClick={handleLogout}>Cerrar sesión</Nav.Link>
                 </>
               ) : (
                 <>
@@ -79,7 +79,7 @@ function App() {
                     <Nav.Link>Signup</Nav.Link>
                   </LinkContainer> */}
                   <LinkContainer to="/login">
-                    <Nav.Link>Login</Nav.Link>
+                    <Nav.Link>Iniciar sesión</Nav.Link>
                   </LinkContainer>
                 </>
               )}
