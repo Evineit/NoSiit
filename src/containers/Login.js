@@ -25,7 +25,7 @@ export default function Login() {
       await signIn(fields.email, fields.password)
       userHasAuthenticated(true);
     } catch (e) {
-      console.log(e.message)
+      alert("The service is temporarily down.")
       setIsLoading(false);
     }
   }

@@ -27,16 +27,18 @@ function App() {
     onLoad();
   }, []);
   async function onLoad() {
-    try {
-      await currentSession();
-      userHasAuthenticated(true);
-    }
-    catch(e) {
-      if (e.message !== 'Request failed with status code 401') {
-        alert(e.message)
-      }
-    }
+    // Siit is temporarily down
     setIsAuthenticating(false);
+    // try {
+    //   await currentSession();
+    //   userHasAuthenticated(true);
+    // }
+    // catch(e) {
+    //   if (e.message !== 'Request failed with status code 401') {
+    //     alert("Siit is temporarily down.")
+    //   }
+    // }
+    // setIsAuthenticating(false);
   }
   
   async function handleLogout() {
