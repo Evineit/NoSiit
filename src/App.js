@@ -7,7 +7,7 @@ import Nav from "react-bootstrap/Nav";
 import { AppContext } from "./libs/contextLib";
 import { LinkContainer } from "react-router-bootstrap";
 import { useHistory } from "react-router-dom";
-import { currentSession, signOut } from "./libs/api";
+import { signOut } from "./libs/api";
 import ReactGA from 'react-ga';
 
 function App() {
@@ -29,16 +29,6 @@ function App() {
   async function onLoad() {
     // Siit is temporarily down
     setIsAuthenticating(false);
-    // try {
-    //   await currentSession();
-    //   userHasAuthenticated(true);
-    // }
-    // catch(e) {
-    //   if (e.message !== 'Request failed with status code 401') {
-    //     alert("Siit is temporarily down.")
-    //   }
-    // }
-    // setIsAuthenticating(false);
   }
   
   async function handleLogout() {
