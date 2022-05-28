@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://backend.nosiit.live/',
+  baseURL: 'https://nosiit-api.herokuapp.com/',
   // Temporarily down siit, so small timeout for lower response times
-  timeout: 100,
+  timeout: 10000,
   withCredentials: true,
 });
 
